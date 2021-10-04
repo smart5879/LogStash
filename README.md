@@ -6,6 +6,7 @@ This guide will demonstrate how to prepare an AWS EC2 instance to use Docker.
 	1. Logon to AWS EC2 Console
 	2. Create EC2 t2.micro instance - Free tier
 	3. Accept the usual settings
+	4. Connect into the EC2 instance
 
 ## Install Docker on EC2.
 
