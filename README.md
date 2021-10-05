@@ -29,3 +29,10 @@ Run: docker info
 | To stop a container                                 | $docker stop  |
 
 
+## Following Conf files added to repo:
+
+| Conf File                                           | Description       |
+| -------------                                       | ------------- |
+| PipelineStandardInandOut.conf                       | Standard Input and Output from LogStash terminal  |
+| PipelineStandardJsonInput.conf                      | Supports Json input for LogStash |
+| PipelineStandardRubydebug.conf                      | Prints Output to terminal via key value pair  |
