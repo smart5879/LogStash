@@ -28,6 +28,19 @@ Run: docker info
 | To run a container                                  | $docker run |
 | To stop a container                                 | $docker stop  |
 
+## Running LogStash on an EC2 Instance:
+
+	1. Create Dir to download LogStash tar file
+	2. sudo curl -O  https://artifacts.elastic.co/downloads/logstash/logstash-7.15.0-linux-x86_64.tar.gz
+	3. tar -zxvf logstash-7.15.0-linux-x86_64.tar.gz
+	
+	Change the memory heap size for the JVM from 1Gb to 400Mb, to stop JVM mem error:
+	1. sudo vi jvm.options
+	2. Change -XMS1g to -XMS400m
+	3. Change -XMx1g to -XMS400m
+	4. Save and close the file and run LogStash:
+	5. Sudo bin/logstash -e "input {stdin {} } output {stdout{} } "
+
 
 ## Following Conf files added to repo:
 
