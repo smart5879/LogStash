@@ -10,7 +10,7 @@ This guide will demonstrate how to prepare an AWS EC2 instance to use Docker.
 
 ## Install Docker on EC2.
 
-```bash
+
 sudo yum update -y
 sudo amazon-linux-extras install docker
 sudo service docker start
@@ -18,7 +18,7 @@ sudo usermod -a -G docker ec2-user
 
 **Logout and back into EC2 to start using the docker cmd
 Run: docker info
-```
+
 ## Essential Docker Commands:
 
 | Description                                         | Command       |
@@ -41,6 +41,11 @@ Run: docker info
 	4. Save and close the file and run LogStash:
 	5. Sudo bin/logstash -e "input {stdin {} } output {stdout{} } "
 
+## The following command can be used to run a config file in LogStash:
+
+Sudo bin/logstash -f {path to config file} <br />
+>example: <br />
+>*Sudo bin/logstash -f config/pipeline.com*
 
 ## Following Conf files added to repo:
 
